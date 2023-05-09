@@ -1,0 +1,52 @@
+.tabs-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .tab-links a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .tab-links a.active {
+    background-color: #fff;
+    border-bottom: none;
+  }
+  
+  .tab {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  
+  .tab.active {
+    display: block;
+  }
+  
+  table.horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table.horarios th, table.horarios td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  table.horarios th {
+    background-color: #f2f2f2;
+  }
+  
+  table.horarios tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

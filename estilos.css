@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(66, 31, 114);
+  }
+  #opciones {
+    font-size: 26px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    margin: 0 auto; /* Esto centrará el select en la página */
+  }
+  #rutas {
+    font-size: 16px;
+    width: 300px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    margin: 0 auto; /* Esto centrará el select en la página */
+  }
+  
+  #opciones option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+   /* pesañas */
+   /* Estilos para la sección de pestañas */
+#pestanas {
+display:none;
+  background-color: #1f4463;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#tawk_6456b716ad80445890eb808e {
+  margin: 0 auto;
+  text-align: center;
+}
+
+

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rutas D</title>
+  <!-- Enlace a los archivos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="tablas.css">
+
+<!-- Enlace al archivo CSS de Leaflet -->
+<link rel="stylesheet" href="lib/leaflet.css" />
+
+<!-- Enlace al archivo JavaScript de Leaflet -->
+<script src="lib/leaflet.js"></script>
+
+
+  <script src="code.jquery.js"></script>
+  <script src="tablas.jquery.js"></script>
+  
+
+  <style>
+    #map {
+        height: 500px;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+  <!-- Menú de inicio -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul></ul>
+    <a class="navbar-brand" href="#opciones">Rutas D</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul></ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#beneficios">Beneficios ambientales</a>
+        </li>
+        <ul></ul>
+        <li class="nav-item active">
+          <a class="nav-link" href="#chat">Chat</a>
+        </li>
+        <ul></ul>
+        <li class="nav-item active">
+          <a class="nav-link" href="#nuestra">Acerca de nosotros</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido de la página -->
+  <div class="container mt-4">
+
+    <!--seccion de imagen logo -->
+    <div class="row">
+      <div class="col-md-4">
+        <img src="images\logo .jpg" class="img-fluid rounded" alt="Imagen" >
+        
+      </div>
+      <div class="col-md-8">
+        <h1>¡Bienvenidos a Rutas D!</h1>
+        <p>
+          Nuestra página tiene como objetivo brindarte toda la información que necesitas sobre las rutas de camiones locales en tu ciudad de una forma estructurada y fácil de entender. Aquí podrás encontrar los precios y horarios de las diferentes rutas para que puedas planear tu viaje de la manera más eficiente. Ya sea que necesites ir a la escuela, al trabajo o simplemente recorrer la ciudad, Rutas D es tu mejor opción para moverte de manera cómoda y segura. ¡Explora nuestras opciones y descubre cómo hacer tu viaje más fácil y económico!</p>      </div>
+    </div>
+    <ul></ul>
+          <h1> Elige tu ciudad aqui</h1>
+      <p></p>
+      <!-- lis de cd -->
+      <select id="opciones">
+        <option value="opcion0">Seleccione su ciudad</option>
+        <option value="opcion1">DELICIAS</option>
+        <option value="opcion2">proximamente</option>
+      </select>
+      <!-- pestaña seccion delicias-->
+      <div id="pestanas">
+        <div class="tabs-container">
+          <div class="tab-links">
+            <a href="#tab-1" class="active">Inicio</a>
+            <a href="#tab-2">Colonia Revolucion</a>
+            <a href="#tab-3">Tec Delicias</a>
+          </div>
+          <div class="tab-content">
+            <!-- delicias inicio -->
+            <div id="tab-1" class="tab active">
+              <h2>Ciudad Delicias</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <img src="images\Reloj_Publico_Dia.jpg" class="img-fluid rounded" alt="Imagen" >
+                  
+                </div>
+                <div class="col-md-7">
+                  <h5>Delicias</h5>
+                  <p>
+                    Delicias es una ciudad ubicada en el estado de Chihuahua, en el norte de México. Conocida por ser una ciudad agrícola y ganadera.</p>
+                
+                <div>
+                  <label for="rutas">Selecciona una ruta y se mostrara en el mapa:</label>
+                  <select id="rutas"></select>
+              </div>
+                </div>
+            </div>
+            </div>
+            <!-- horarios y precios. Colonia Revolucion -->
+            <div id="tab-2" class="tab">
+              <table class="horarios">
+                <thead>
+                  <h4 style="text-align: center;">Precio General: 12 pesos</h4>
+                  <h4 style="text-align: center;">Precio estudiante: 6 pesos</h4>
+                  <tr>
+                    <th>Día</th>
+                    <th>Horarios</th>
+                    <th>Intervalos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lunes</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Martes</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Miércoles</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Jueves</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Viernes</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Sábado</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada 30 min</td>
+                  </tr>
+                  <tr>
+                    <td>Domingo</td>
+                    <td>6:00am - 9:00pm</td>
+                    <td>Pasa cada hora</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <div id="tab-3" class="tab">
+              <h2>Contenido de la pestaña 3</h2>
+              <p>Este es el contenido de la pestaña 3.</p>
+            </div>
+          </div>
+        </div>
+          </div>
+      <ul></ul>
+          <!-- mapa  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+      <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([19.4326, -99.1332], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+          maxZoom: 18,
+        }).addTo(map);
+
+        // Carga las rutas desde el archivo ruta.geojson y agrega las opciones a la lista desplegable
+        function cargarRutas() {
+            fetch("ruta.geojson")
+            .then(response => response.json())
+            .then(data => {
+                var select = document.getElementById("rutas");
+                data.features.forEach(feature => {
+                    var option = document.createElement("option");
+                    option.value = JSON.stringify(feature.geometry);
+                    option.text = feature.properties.nombre;
+                    select.appendChild(option);
+                    
+                     // Agregar la opción de estilo
+      var style = {
+        color: feature.properties.color
+      };
+
+      option.setAttribute("data-style", JSON.stringify(style));
+
+      select.appendChild(option);
+                });
+            });
+        }
+
+        // Crea una capa con la geometría de la ruta seleccionada y establece la vista del mapa en esa capa
+        function mostrarRuta() {
+  var select = document.getElementById("rutas");
+  var geometry = JSON.parse(select.value);
+
+  // Obtener el estilo de la opción seleccionada
+  var style = JSON.parse(select.options[select.selectedIndex].getAttribute("data-style"));
+
+  var layer = L.geoJSON(geometry, {
+    style: style // Pasar el estilo como parámetro
+  });
+
+  layer.addTo(map);
+  map.fitBounds(layer.getBounds());
+}
+
+
+        // Llama a la función cargarRutas() para cargar las opciones de rutas en la lista desplegable
+        cargarRutas();
+
+        // Agrega un listener para detectar cuando se selecciona una ruta en la lista desplegable
+        var select = document.getElementById("rutas");
+        select.addEventListener("change", function() {
+            // Remueve las capas anteriores del mapa antes de mostrar la nueva ruta
+            map.eachLayer(function(layer) {
+                if (layer instanceof L.GeoJSON) {
+                    map.removeLayer(layer);
+                }
+            });
+            mostrarRuta();
+        });
+    </script>
+  <ul></ul>
+  <section id="beneficios">
+    <h2>Beneficios ambientales de tomar el transporte público</h2>
+<p>Tomar el transporte público en lugar de conducir un vehículo particular puede tener un gran impacto positivo en el medio ambiente. Aquí te presentamos algunos de los principales beneficios ambientales:</p>
+<ul>
+  <li><strong>Reducción de emisiones de gases de efecto invernadero:</strong> Los vehículos particulares son una de las principales fuentes de emisiones de gases de efecto invernadero, contribuyendo al cambio climático. Al tomar el transporte público, se reducen las emisiones de dióxido de carbono, óxido de nitrógeno y otros gases dañinos al medio ambiente.</li>
+  <li><strong>Menor contaminación del aire:</strong> Los vehículos particulares también son una fuente importante de contaminación del aire, lo que puede tener efectos negativos en la salud de las personas y la calidad del medio ambiente. Al tomar el transporte público, se reduce la cantidad de contaminantes emitidos al aire.</li>
+  <li><strong>Menor consumo de energía:</strong> Los vehículos particulares requieren grandes cantidades de energía para funcionar, en forma de combustibles fósiles como la gasolina o el diésel. Al tomar el transporte público, se reduce la cantidad de energía necesaria para transportar a las personas, ya que los vehículos públicos pueden transportar a más personas con la misma cantidad de combustible.</li>
+  <li><strong>Reducción de la congestión del tráfico:</strong> Cuando muchas personas conducen vehículos particulares, se genera una congestión del tráfico que puede tener efectos negativos en la calidad del aire, el tiempo de viaje y la eficiencia del transporte. Al tomar el transporte público, se reduce la cantidad de vehículos en la carretera, lo que puede mejorar la eficiencia del transporte y reducir la congestión del tráfico.</li>
+</ul>
+<p>Tomar el transporte público es una forma sencilla y efectiva de contribuir al cuidado del medio ambiente y mejorar la calidad de vida en nuestras ciudades. Además, puede ser una opción económica y conveniente para muchas personas.</p>
+  </section>
+    <ul></ul>
+    <section id="chat">
+<!--correo mensaje-->
+<form action="mailto:rutasdmayuscula@gmail.com" method="post" enctype="text/plain">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  <br>
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" required></textarea>
+  <br>
+  <input type="submit" value="Enviar">
+</form>
+
+  <!-- Enlace a los archivos JavaScript de Bootstrap (jQuery y Popper.js son requeridos por Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="code.jquery.js"></script>
+  <script src="tablas.jquery.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+  
+
+</body>
+<ul></ul>
+<footer>
+  <section id="nuestra">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Nuestra empresa</h2>
+          <p>Somos una empresa dedicada a ofrecer informacion sobre rutas de una manera sencilla, eficaz y organizada. Nuestro compromiso es ofrecer el mejor servicio a nuestros clientes.</p>
+        </div>
+        <div class="col-md-3">
+          <h2>Contacto</h2>
+          <ul class="list-unstyled">
+            <li>Correo electrónico: rutasdmayuscula@gmail.com</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h2>Síguenos en instagram</h2>
+          <ul class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+          </ul>
+  </section>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
